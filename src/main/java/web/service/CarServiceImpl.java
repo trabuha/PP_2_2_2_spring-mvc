@@ -10,8 +10,6 @@ import java.util.stream.Collectors;
 
 @Service
 public class CarServiceImpl implements CarService {
-
-
     @Override
     public List<Car> getAllCars() {
         List<Car> cars = new ArrayList<>();
@@ -23,7 +21,6 @@ public class CarServiceImpl implements CarService {
         return cars;
     }
 
-
     @Override
     public List<Car> getCars(Integer count) {
         List<Car> allCars = getAllCars();
@@ -33,10 +30,4 @@ public class CarServiceImpl implements CarService {
             return allCars.stream().limit(count).collect(Collectors.toList());
         }
     }
-
-
-
-
-
-
 }
